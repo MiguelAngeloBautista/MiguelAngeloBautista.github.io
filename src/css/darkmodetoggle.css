@@ -1,0 +1,43 @@
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: fixed; /* Fixed position to keep it at the top right */
+    top: 2%; /* Adjust top distance as needed (2% from the top of the viewport) */
+    right: 5%; /* Adjust right distance as needed (2% from the right of the viewport) */
+    display: inline-block;
+}
+.dark-mode-toggle input[type="checkbox"] {
+    display: none;
+}
+/* Slider */
+.slider {
+    width: 60px; /* Set the width of the slider */
+    height: 30px; /* Set the height of the slider */
+    background-color: #007BFF; /* Sun color #f1c40f*/
+    position: absolute;
+    cursor: pointer;
+    border-radius: 15px; /* Round slider */
+    transition: background-color 0.4s;
+}
+/* Thumb (circle inside the slider) */
+.slider:before {
+    content: "";
+    width: 30px; /* Set the width and height of the thumb */
+    height: 30px;
+    background-color: transparent; /* Color of the thumb (light mode) */
+    border-radius: 50%; /* Shape of the thumb (circle) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+    background-image: url('../images/sun.png'); /* Add the image for the thumb (light mode) */
+    background-size: cover; /* Adjust the image size as needed */
+}
+/* Styling for checked (dark mode) */
+.dark-mode-toggle input[type="checkbox"]:checked + .slider {
+    background-color: #333; /* Dark mode background color */
+}
+.dark-mode-toggle input[type="checkbox"]:checked + .slider:before {
+    transform: translateX(30px); /* Move the thumb to the right (dark mode) */
+    background-color: #f1c40f; /* Color of the thumb (dark mode) */
+    background-image: url('../images/moon.png'); /* Add the image for the thumb (dark mode) */
+}
