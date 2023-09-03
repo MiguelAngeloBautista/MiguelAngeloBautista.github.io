@@ -1,15 +1,12 @@
-// darkmode.js
-const darkModeToggle = document.getElementById("dark-mode-toggle-checkbox");
-const toggleIcon = document.getElementById("toggle-icon");
+const body = document.getElementById('body');
+const darkModeButton = document.getElementById('dark-mode-button');
 
-darkModeToggle.addEventListener("change", () => {
-    if (darkModeToggle.checked) {
-        // Dark Mode is enabled
-        document.body.classList.add("dark-mode");
-        toggleIcon.src = "./src/images/moon.png"; // Replace with your moon icon
+darkModeButton.addEventListener('click', () => {
+    if (body.classList.contains('dark-mode')) {
+        // Switch to Light Mode
+        body.classList.remove('dark-mode');
     } else {
-        // Dark Mode is disabled
-        document.body.classList.remove("dark-mode");
-        toggleIcon.src = "./src/images/sun.png"; // Replace with your sun icon
+        // Switch to Dark Mode
+        body.classList.add('dark-mode');
     }
 });
