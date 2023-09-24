@@ -1,10 +1,10 @@
 /* Light Mode */
 body.light-mode {
-    background-color: #f8f8f8;
+    background-color: #a5a5a5;
     color: #333;
 }
 body.light-mode .portfolio-item {
-    background-color: #fff;
+    background-color: #a5a5a5;
     color: #333;
 }
 body.light-mode header {
@@ -44,44 +44,67 @@ p {
     color: #fff;
     padding: 20px 0;
 }
+.heading {
+    padding-top: 33vh;
+    padding-bottom: 40vh;
+}
+
+.pad {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+}
+
+.even {
+    background-color: #007BFF;
+}
+.even h2 {
+    color: #fff;
+}
+
+body.light-mode .even{
+    background-color: #007BFF;
+}
+body.dark-mode .even{
+    background-color: #222;
+}
 
 
 
 /* Remove default link styles */
-.portfolio-link {
+.project-link {
     text-decoration: none;
     color: inherit;
     transition: none;
 }
 
 /* Change cursor on hover to indicate the link */
-.portfolio-link:hover {
+.project-link:hover {
     cursor: pointer;
 }
-.portfolio-item {
+.project-item {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
-.portfolio-item:hover {
+.project-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
-.portfolio-image {
+.project-image {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     max-height: 200px;
     object-fit: cover;
 }
-.portfolio-content {
+.project-content {
     padding: 20px;
 }
-.portfolio-title {
+.project-title {
     font-size: 24px;
     font-weight: bold;
     margin: 0;
 }
-.portfolio-description {
+.project-description {
     font-size: 16px;
 }
